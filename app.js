@@ -24,16 +24,18 @@ function cookieShop(name, min, max, avg) {
     var table = document.getElementById('storeTable');
     var tr = document.createElement('tr');
     table.appendChild(tr);
-    tr.appendChild(document.createTextNode(this.name));
+    var tdNames = document.createElement('td');
+    tdNames.appendChild(document.createTextNode(this.name));
+    tr.appendChild(tdNames);
 
     for (var i = 0; i < this.timeOfDay.length; i++) {
       var td = document.createElement('td');
-      td.appendChild(document.createTextNode(Math.floor(this.cookiesPurchasedArray[i]) + ' cookies'));
+      td.appendChild(document.createTextNode(Math.floor(this.cookiesPurchasedArray[i]) + ' cookies.'));
       tr.appendChild(td);
     }
     var td2 = document.createElement('td');
-    td2.appendChild(document.createTextNode('Total: ' + Math.floor(this.total) + ' cookies'));
-    tr.appendChild(td);
+    td2.appendChild(document.createTextNode(Math.floor(this.total) + ' cookies.'));
+    tr.appendChild(td2);
   };
 
 }
