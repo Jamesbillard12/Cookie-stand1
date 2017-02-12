@@ -1,4 +1,4 @@
-var pikesPlace = {
+var pikePlace = {
   min: 17,
   max: 88,
   avg: 5.2,
@@ -18,17 +18,20 @@ var pikesPlace = {
   },
   renderCookiesPerHour: function() {
     this.cookiesPurchased();
+    var idPikePlace = document.createElement('ul');
+    idPikePlace.id ='pikePlace';
+    var body = document.querySelector('body');
+    idPikePlace = document.createTextNode('Pike Place');
+    body.appendChild(idPikePlace);
     var ul = document.getElementById('pikePlace');
     for (var i = 0; i < this.timeOfDay.length; i++) {
       var li = document.createElement("li");
       li.appendChild(document.createTextNode(this.timeOfDay[i] + Math.floor(this.cookiesPurchasedArray[i])));
-      ul.appendChild(li);
+      idPikePlace.appendChild(li);
 
     }
     var li2 = document.createElement("li");
     li2.appendChild(document.createTextNode("Total: " + Math.floor(this.total)));
-    ul.appendChild(li2);
+    idPikePlace.appendChild(li2);
   },
-}
-
-// this.timeOfDay[i] + Math.floor
+} 
