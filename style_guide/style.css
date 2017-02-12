@@ -1,6 +1,17 @@
+
 #highlights {
   font-family: 'Inconsolata', monospace;
   color: #191f1d;
+}
+
+#head2 {
+  font-family: Helvetica, sans-serif;
+  color: #25705A;
+}
+
+#head3 {
+  font-family: Georgia, serif;
+  color: #25705A;
 }
 
 #primary {
