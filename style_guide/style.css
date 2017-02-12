@@ -1,0 +1,40 @@
+#highlights {
+  font-family: 'Inconsolata', monospace;
+  color: #191f1d;
+}
+
+#primary {
+  background-color: #AA3939;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  vertical-align: bottom;
+  color: white;
+}
+
+#secondary {
+  background-color: #25705A;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  vertical-align: bottom;
+  color: white;
+}
+
+#third {
+  background-color: #2D882D;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  vertical-align: bottom;
+  color: white;
+}
+
+#forth {
+  background-color: #191f1d;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  vertical-align: bottom;
+  color: white;
+}
