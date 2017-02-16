@@ -43,11 +43,11 @@ function renderTableheader() {
 
       for (var i = 0; i < 8; i++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode(Math.floor(this.cookiesPurchasedArray[i]) + ' cookies.'));
+        td.appendChild(document.createTextNode(Math.floor(this.cookiesPurchasedArray[i]) + ' cookies'));
         tr.appendChild(td);
       }
       var td2 = document.createElement('td');
-      td2.appendChild(document.createTextNode(Math.floor(this.total) + ' cookies.'));
+      td2.appendChild(document.createTextNode(Math.floor(this.total) + ' cookies'));
       tr.appendChild(td2);
     };
 
