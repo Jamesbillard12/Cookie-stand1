@@ -1,12 +1,11 @@
 html, body {
-  overflow: hidden;
   height: 100%;
 }
 
 
 .header {
   background-color: #AA3939;
-  width: 100%;
+  width: 99.5%;
   height: 25%;
   border-style: solid;
   border-color: #191f1d;
@@ -14,18 +13,21 @@ html, body {
 
 }
 
-td {
-  border-style: solid;
+td, th {
+  border-bottom-style: groove;
+  text-align-last: center;
+  font-size: 1em;
 }
 
-tr {
-  border-style: solid;
+tr, th {
+  border-bottom-style: : solid;
   background-color: #efefef;
 }
 
 table {
   border-collapse: collapse;
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
+  width: 80%;
+  height: 40%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
