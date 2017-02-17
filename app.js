@@ -24,7 +24,7 @@ function cookieShop(name, min, max, avg) {
   };
 
   this.cookiesPurchased = function() {
-    for (var i = 1; i < headerArr.length - 1; i++) {
+    for (var i = 1; i < headerArr.length; i++) {
       var rand = this.avg * this.randCustPerHour();
       this.cookiesPurchasedArray.push(rand);
       this.total += rand;
