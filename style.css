@@ -55,7 +55,7 @@ h1 {
 td, th, tr {
   border-bottom-style: groove;
   text-align-last: center;
-  background-color: #efefef;
+  /*background-color: #efefef;*/
   font-size: 1.3vw;
 }
 
@@ -70,6 +70,10 @@ table {
   display: block
 }
 
-.grey {
-  background-color: grey;
+.odd {
+  background-color: #efefef;
+}
+
+.even {
+  background-color: white;
 }

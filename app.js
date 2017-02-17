@@ -24,7 +24,7 @@ function cookieShop(name, min, max, avg) {
   };
 
   this.cookiesPurchased = function() {
-    for (var i = 1; i < headerArr.length; i++) {
+    for (var i = 1; i < headerArr.length - 1; i++) {
       var rand = this.avg * this.randCustPerHour();
       this.cookiesPurchasedArray.push(rand);
       this.total += rand;
@@ -41,7 +41,7 @@ function cookieShop(name, min, max, avg) {
     tdNames.appendChild(document.createTextNode(this.name));
     tr.appendChild(tdNames);
 
-    for (var i = 1; i < headerArr.length - 1; i++) {
+    for (var i = 0; i < this.cookiesPurchasedArray.length; i++) {
       var td = document.createElement('td');
       td.appendChild(document.createTextNode(Math.floor(this.cookiesPurchasedArray[i]) + ' cookies'));
       tr.appendChild(td);
@@ -50,7 +50,6 @@ function cookieShop(name, min, max, avg) {
     td2.appendChild(document.createTextNode(Math.floor(this.total) + ' cookies'));
     tr.appendChild(td2);
   };
-
 }
 
 function handleFormSubmit(event) {
@@ -64,10 +63,6 @@ function handleFormSubmit(event) {
 
   var newCookieShop = new cookieShop(name, min, max, avg);
   newCookieShop.renderCookiesPerHour();
-
-  // renderCookiesPerHour(newCookieShop);
-  // tfoot.innerHTML = ''
-  // makeTotalRow();
 
   event.target.name.value = null;
   event.target.min.value = null;
@@ -93,3 +88,18 @@ bellevueSquare.renderCookiesPerHour();
 
 var alki = new cookieShop('Alki ', 3, 24, 2.6);
 alki.renderCookiesPerHour();
+
+function alternate(id){
+  if(document.getElementsByTagName){
+    var table = document.getElementById('storeTable');
+    var rows = table.getElementsByTagName("tr");
+    for(i = 0; i < rows.length; i++){
+      if(i % 2 === 0){
+        rows[i].className = "even";
+      }else{
+        rows[i].className = "odd";
+      }
+    }
+  }
+}
+alternate('storeTable');
