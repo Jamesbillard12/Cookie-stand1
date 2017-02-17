@@ -55,8 +55,11 @@ h1 {
 td, th, tr {
   border-bottom-style: groove;
   text-align-last: center;
-  /*background-color: #efefef;*/
   font-size: 1.3vw;
+}
+
+th {
+  background-color: #efefef;
 }
 
 

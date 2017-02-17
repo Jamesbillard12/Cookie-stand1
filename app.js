@@ -50,6 +50,20 @@ function cookieShop(name, min, max, avg) {
     td2.appendChild(document.createTextNode(Math.floor(this.total) + ' cookies'));
     tr.appendChild(td2);
   };
+  this.alternate = function(id){
+    if(document.getElementsByTagName){
+      var table = document.getElementById('storeTable');
+      var rows = table.getElementsByTagName('tr');
+      for(i = 0; i < rows.length; i++){
+        if(i % 2 === 0){
+          rows[i].className = 'even';
+        }else{
+          rows[i].className = 'odd';
+        }
+      }
+    }
+  }
+  this.alternate();
 }
 
 function handleFormSubmit(event) {
@@ -88,18 +102,3 @@ bellevueSquare.renderCookiesPerHour();
 
 var alki = new cookieShop('Alki ', 3, 24, 2.6);
 alki.renderCookiesPerHour();
-
-function alternate(id){
-  if(document.getElementsByTagName){
-    var table = document.getElementById('storeTable');
-    var rows = table.getElementsByTagName("tr");
-    for(i = 0; i < rows.length; i++){
-      if(i % 2 === 0){
-        rows[i].className = "even";
-      }else{
-        rows[i].className = "odd";
-      }
-    }
-  }
-}
-alternate('storeTable');
