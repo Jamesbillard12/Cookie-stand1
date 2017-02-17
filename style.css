@@ -56,7 +56,6 @@ td, th, tr {
   border-bottom-style: groove;
   text-align-last: center;
   background-color: #efefef;
-  width: auto;
   font-size: 1.3vw;
 }
 
@@ -64,10 +63,9 @@ td, th, tr {
 table {
 
   border-collapse: collapse;
-  width: 85%;
+  width: 95%;
   height: 38%;
   margin-top: 10%;
-  margin-left: 11%;
-  margin-right: 10%;
+  margin-left: 8%;
   display: block;
 }
