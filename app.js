@@ -53,6 +53,32 @@ function renderTableheader() {
 
   }
 
+  function handleFormSubmit(event) {
+  event.preventDefault();
+  console.log(event);
+
+  var name = event.target.name.value;
+  var min = parseFloat(event.target.min.value);
+  var max = parseFloat(event.target.max.value);
+  var avg = parseFloat(event.target.avg.value);
+
+  var newCookieShop = new cookieShop(name, min, max, avg);
+  newCookieShop.renderCookiesPerHour();
+
+  // renderCookiesPerHour(newCookieShop);
+  // tfoot.innerHTML = ''
+  // makeTotalRow();
+
+  event.target.name.value = null;
+  event.target.min.value = null;
+  event.target.max.value = null;
+  event.target.avg.value = null;
+}
+
+
+form.addEventListener('submit', handleFormSubmit);
+
+
   var pikePlace = new cookieShop('Pike-Place ', 17, 88, 5.2);
   pikePlace.renderCookiesPerHour();
 
