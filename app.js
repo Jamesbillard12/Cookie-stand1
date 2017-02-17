@@ -63,7 +63,7 @@ function cookieShop(name, min, max, avg) {
       }
     }
   }
-  this.alternate();
+
 }
 
 function handleFormSubmit(event) {
@@ -77,6 +77,7 @@ function handleFormSubmit(event) {
 
   var newCookieShop = new cookieShop(name, min, max, avg);
   newCookieShop.renderCookiesPerHour();
+  newCookieShop.alternate();
 
   event.target.name.value = null;
   event.target.min.value = null;
@@ -90,15 +91,20 @@ form.addEventListener('submit', handleFormSubmit);
 
 var pikePlace = new cookieShop('Pike-Place ', 17, 88, 5.2);
 pikePlace.renderCookiesPerHour();
+pikePlace.alternate();
 
 var seaTacAir = new cookieShop('Sea Tac Airport ', 6, 24, 1.2);
 seaTacAir.renderCookiesPerHour();
+seaTacAir.alternate();
 
 var southCenter = new cookieShop('South Center ', 11, 38, 1.9);
 southCenter.renderCookiesPerHour();
+southCenter.alternate();
 
 var bellevueSquare = new cookieShop('Bellevue Square ', 20, 48, 3.3);
 bellevueSquare.renderCookiesPerHour();
+bellevueSquare.alternate();
 
 var alki = new cookieShop('Alki ', 3, 24, 2.6);
 alki.renderCookiesPerHour();
+alki.alternate();
