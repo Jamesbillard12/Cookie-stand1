@@ -24,6 +24,13 @@ body {
   padding-bottom: 10px;
 }
 
+.catchphrase {
+  text-align: center;
+  margin-top: -20px;
+  font-style: italic;
+}
+
+
 
 
 .img {
@@ -84,6 +91,10 @@ h1 {
   margin-left: 5px;
 }
 
+.opentime {
+  padding-left: 15px;
+}
+
 .content {
   height: 100%;
   width: 80.3%;
@@ -96,6 +107,18 @@ h1 {
   border-color: black;
   background-color: rgba(42, 44, 44, 0.5);
 }
+
+h2 {
+  padding-top: 20px;
+  padding-left: 15px;
+  font-size: 2vw;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.offensiveex {
+  padding-top: 10px;
+  padding-left: 15px;
 
 }
 
