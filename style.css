@@ -6,7 +6,7 @@ html, body {
 body {
   background: url(images/fishing-background-12.jpg)no-repeat 50% 50% fixed;
   margin: 0;
-  background-position: 15px 15px;
+  background-position: 0px 1px;
 }
 .header2 {
   width: 100%;
@@ -14,11 +14,13 @@ body {
 }
 
 .header{
-  width: 100%;
+  width: 70%;
+  margin-left: 15%;
   height: auto;
-  border-bottom-style: solid;
+  border-style: solid;
   border-color: black;
-  border-width: 1px;
+  border-width: 5px;
+
 }
 
 
@@ -51,32 +53,34 @@ h1 {
 }
 
 .contentaside{
-  width: 100%;
+  width: 70%;
   height: 100%;
+  margin-top: -7px;
 }
 
 .aside {
   height: 100%;
-  width: 4%;
-  background-color: rgba(42, 44, 44, 0.5);
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 5px;
-  float: left;
+    width: 20%;
+    background-color: rgba(42, 44, 44, 0.5);
+    border-style: solid;
+    border-width: 2px;
+    float: left;
+    margin-left: 21.4%
 }
 
 .content {
   height: 100%;
-  width: 95%;
-  margin-left: 4.6%;
+  width: 80.3%;
+  margin-left: 41.8%;
   margin-top: 7px;
   border-style: solid;
   color: white;
   border-style: solid;
   border-width: 2px;
   border-color: black;
-  border-radius: 5px;
   background-color: rgba(42, 44, 44, 0.5);
+}
+
 }
 
 td, th, tr {
@@ -140,4 +144,23 @@ label{
   margin-right: 5px;
   margin-left: 5px;
 
+}
+
+.footer{
+  width: 70%;
+  height: auto;
+  background-color: rgba(42, 44, 44, 0.5);
+  border-style: solid;
+  border-width: 2px;
+  margin-left: 15%;
+  height: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+}
+
+p {
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
