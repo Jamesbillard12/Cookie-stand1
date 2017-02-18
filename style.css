@@ -1,19 +1,24 @@
+/**{
+border-style: dashed;
+}*/
 html, body {
   height: 100%;
 }
 
 body {
-  margin: 0px;
-  margin-top: 20px;
   background: url(images/fishing-background-12.jpg)no-repeat 50% 50% fixed;
   background-position: 0 65px;
   -webkit-background-size: cover;
 
 }
+.header2 {
+  height: 40%;
+  width: 100%;
+}
 
 .header{
   width: 100%;
-  height: 100%;
+  height: 59%;
   margin-top: -27%;
   position: fixed;
 }
@@ -23,8 +28,8 @@ body {
   background-image: url(/Users/jamesrbillard/programs/code_fellows/code_201/lab_8/my-lab8/Cookie-stand1/images/woodbackground.jpg);
   border-bottom-style: solid;
   width: 100%;
-  height: 25%;
-  min-height: 253px;
+  height: 100%;
+  max-height: 253px;
   margin: 0px;
   margin-top: -21px;
   position: fixed;
@@ -36,16 +41,23 @@ body {
 }
 h1 {
   text-align: center;
+  margin-top: 3%;
+  color: white;
 }
 .fish {
   width: 35%;
   margin-left: 32%;
-  margin-top: 0%;
+  margin-top: -1%;
 }
 .wrapper {
   width: 100%;
   height: 100%;
   margin-top: 19%;
+}
+
+.contentaside{
+  width: 100%;
+  height: 100%;
 }
 .aside {
   height: 90%;
@@ -60,7 +72,6 @@ h1 {
   height: 90%;
   width: 95%;
   margin-left: 4.6%;
-  margin-top: 1%;
   display: block;
 
 }
@@ -91,16 +102,19 @@ table {
 
   border-collapse: collapse;
   overflow-y: scroll;
-  margin-top: -63%;
-  margin-left: 7.5%;
+  margin-left: -4.5%;
   display: block;
   width: 100%;
   float: right;
 
+
 }
 
-.form{
-  margin-top: 29%;
+.formclass{
+  width: 97.5%;
+  height: 15%;
+  border: 0;
+
 }
 
 .odd {
