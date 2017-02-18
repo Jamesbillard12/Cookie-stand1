@@ -2,13 +2,14 @@
 <html>
 <head>
   <title>Salmon Cookies!</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 
 
-  <div class="wrapper">
+  <main class="wrapper">
 
       <header class= "header">
         <div class="img">
@@ -28,24 +29,48 @@
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non mollis ligula. Ut sagittis feugiat lectus, ut commodo velit semper non. Cras tempor rhoncus libero, id bibendum massa sodales sit amet. Morbi ac lorem quis arcu mattis aliquet vitae quis orci. Curabitur vehicula eleifend est, a scelerisque ligula fringilla ac. Ut eget nisl ut nibh vehicula lobortis sed ultricies enim. Vivamus est lectus, laoreet ut iaculis eget, rhoncus vel tortor. Nunc iaculis aliquet facilisis. Maecenas bibendum efficitur quam, vitae eleifend est mollis non. Praesent ipsum velit, dapibus at rhoncus eget, venenatis eget ligula. Vivamus dignissim metus sollicitudin quam vulputate eleifend. Nunc porttitor eget massa ac cursus. Ut gravida vulputate suscipit.</p>
         <form id="form" class="form">
-
-          <fieldset class="formclass">
+          <div>
             <label for="name">Location name:</label>
             <input type="text" name="name" required>
+          </div>
+          <div>
             <label for="min">Minimum Customers:</label>
             <input type="number" name="min" min="0" required>
+          </div>
+          <div>
+            <label for="max">Maximum Customers:</label>
+            <input type="number" name="max" min="0" required>
+          </div>
+          <div>
+            <label for="avg"> Average Cookie Sold:</label>
+            <input type="number" name="avg" step="any" min="0" required>
+          </div>
+          <div>
+            <input type="submit" value="SUBMIT">
+          </div>
+          <!--<fieldset class="formclass">
+            <div>
+              <label for="name">Location name:</label>
+              <input type="text" name="name" required>
+            </div>
+            <div>
+              <label for="min">Minimum Customers:</label>
+              <input type="number" name="min" min="0" required>
+            </div>
+            <!--
             <label for="max">Maximum Customers:</label>
             <input type="number" name="max" min="0" required>
             <label for="avg"> Average Cookie Sold:</label>
             <input type="number" name="avg" step="any" min="0" required>
 
             <input type="submit" value="SUBMIT">
-          </fieldset>
+          </fieldset>          -->
+
         </form>
         <table id="storeTable"></table>
       </div>
     </div>
-  </div>
+  </main>
 
   <script src="app.js" charset="utf-8"></script>
 
