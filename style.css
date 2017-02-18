@@ -1,6 +1,4 @@
-/**{
-border-style: dashed;
-}*/
+
 html, body {
   height: 100%;
 }
@@ -8,6 +6,7 @@ html, body {
 body {
   background: url(images/fishing-background-12.jpg)no-repeat 50% 50% fixed;
   margin: 0;
+  background-position: 15px 15px;
 }
 .header2 {
   width: 100%;
@@ -16,13 +15,15 @@ body {
 
 .header{
   width: 100%;
-  height: 59%;
+  height: auto;
+  border-bottom-style: solid;
+  border-color: black;
+  border-width: 1px;
 }
 
 
 .img {
   background-image: url(/Users/jamesrbillard/programs/code_fellows/code_201/lab_8/my-lab8/Cookie-stand1/images/woodbackground.jpg);
-  border-bottom-style: solid;
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -35,11 +36,15 @@ body {
 h1 {
   text-align: center;
   color: white;
+  font-size: 7vw;
+  font-family: 'Inconsolata', monospace
 }
 .fish {
   width: 35%;
   margin-left: 32%;
+  margin-bottom: 15px;
 }
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -49,19 +54,29 @@ h1 {
   width: 100%;
   height: 100%;
 }
+
 .aside {
-  height: 90%;
+  height: 100%;
   width: 4%;
-  background-color: ;
+  background-color: rgba(42, 44, 44, 0.5);
   border-style: solid;
+  border-width: 2px;
   border-radius: 5px;
   float: left;
 }
 
 .content {
-  height: 90%;
+  height: 100%;
   width: 95%;
   margin-left: 4.6%;
+  margin-top: 7px;
+  border-style: solid;
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 5px;
+  background-color: rgba(42, 44, 44, 0.5);
 }
 
 td, th, tr {
@@ -74,7 +89,8 @@ td, th, tr {
 
 th {
   background-color: rgba(48, 44, 44, 0.9);
-  color: white
+  color: white;
+  font-weight: bold;
 }
 
 td {
@@ -91,18 +107,13 @@ table {
   border-collapse: collapse;
   overflow-y: scroll;
   margin-left: -4.5%;
+  margin-top: 10px;
   display: block;
   width: 100%;
+  height: 66%;
   float: right;
 }
 
-.formclass{
-  width: 97.5%;
-  height: 15%;
-  border: 0;
-  display: flex;
-  flex-direction: row;
-}
 .odd {
   background-color: rgba(61, 61, 59, 0.6);
   color: white;
@@ -110,11 +121,23 @@ table {
 }
 
 .even {
-  background-color: rgba(255, 255, 255, 0.6);;
+  background-color: rgba(255, 255, 255, 0.6);
   width: 100px;
+  color: black;
+
 }
 
 
 form {
   display: flex;
+  margin-top: 10px;
+}
+
+
+label{
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-left: 5px;
+
 }
