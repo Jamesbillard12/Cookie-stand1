@@ -1,6 +1,4 @@
-/**{
-border-style: dashed;
-}*/
+
 html, body {
   height: 100%;
 }
@@ -8,21 +6,35 @@ html, body {
 body {
   background: url(images/fishing-background-12.jpg)no-repeat 50% 50% fixed;
   margin: 0;
-}
-.header2 {
-  width: 100%;
-  height: 40%;
+  background-position: 0px 1px;
 }
 
+
 .header{
-  width: 100%;
-  height: 59%;
+  width: 70%;
+  margin-left: 15%;
+  height: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
 }
+
+.headertext {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.catchphrase {
+  text-align: center;
+  margin-top: -20px;
+  font-style: italic;
+}
+
+
 
 
 .img {
   background-image: url(/Users/jamesrbillard/programs/code_fellows/code_201/lab_8/my-lab8/Cookie-stand1/images/woodbackground.jpg);
-  border-bottom-style: solid;
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -35,33 +47,79 @@ body {
 h1 {
   text-align: center;
   color: white;
+  font-size: 7vw;
+  font-family: 'Indie Flower','Inconsolata', monospace
 }
+.est {
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
 .fish {
   width: 35%;
   margin-left: 32%;
+  margin-bottom: 15px;
 }
+
 .wrapper {
   width: 100%;
   height: 100%;
 }
 
 .contentaside{
-  width: 100%;
+  width: 70%;
   height: 100%;
+  margin-top: -7px;
 }
+
 .aside {
-  height: 90%;
-  width: 4%;
-  background-color: ;
+  height: 100%;
+  width: 20%;
+  background-color: rgba(42, 44, 44, 0.5);
   border-style: solid;
-  border-radius: 5px;
+  border-width: 2px;
   float: left;
+  margin-left: 21.4%
+}
+
+.mapaddress {
+  text-decoration: none;
+  color: white;
+  font-size: 1vw;
+  padding-top: 10px;
+  margin-left: 5px;
+}
+
+.opentime {
+  padding-left: 15px;
 }
 
 .content {
-  height: 90%;
-  width: 95%;
-  margin-left: 4.6%;
+  height: 100%;
+  width: 80.3%;
+  margin-left: 41.8%;
+  margin-top: 7px;
+  border-style: solid;
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: rgba(42, 44, 44, 0.5);
+}
+
+h2 {
+  padding-top: 20px;
+  padding-left: 15px;
+  font-size: 2vw;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.offensiveex {
+  padding-top: 10px;
+  padding-left: 15px;
+
 }
 
 td, th, tr {
@@ -74,7 +132,8 @@ td, th, tr {
 
 th {
   background-color: rgba(48, 44, 44, 0.9);
-  color: white
+  color: white;
+  font-weight: bold;
 }
 
 td {
@@ -91,18 +150,13 @@ table {
   border-collapse: collapse;
   overflow-y: scroll;
   margin-left: -4.5%;
+  margin-top: 10px;
   display: block;
   width: 100%;
+  height: auto;
   float: right;
 }
 
-.formclass{
-  width: 97.5%;
-  height: 15%;
-  border: 0;
-  display: flex;
-  flex-direction: row;
-}
 .odd {
   background-color: rgba(61, 61, 59, 0.6);
   color: white;
@@ -110,11 +164,69 @@ table {
 }
 
 .even {
-  background-color: rgba(255, 255, 255, 0.6);;
+  background-color: rgba(255, 255, 255, 0.6);
   width: 100px;
+  color: black;
+
 }
 
 
 form {
-  display: flex;
+  display: inline-block;;
+  margin-top: 10px;
+  margin-left: 9%;
+}
+
+
+label{
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 250px;
+  text-align: right;
+
+
+}
+input {
+  display: inline-block;
+  float: left;
+  margin-top: 5px;
+}
+
+.submit {
+  margin-left: 58%;
+}
+
+.footer{
+  width: 70%;
+  background-color: rgba(42, 44, 44, 0.5);
+  border-style: solid;
+  border-width: 2px;
+  margin-left: 15%;
+  height: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+}
+
+p {
+  color: white;
+  text-align: left: 5px;
+  margin: 0;
+
+}
+
+.titleformat {
+  font-weight: bold;
+  margin-left: 15px;
+  font-family: Georgia, serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.footerp {
+  padding: 20px;
+  text-align: left;
+  font-style: italic;
 }
