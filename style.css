@@ -25,6 +25,7 @@ body {
 }
 
 
+
 .img {
   background-image: url(/Users/jamesrbillard/programs/code_fellows/code_201/lab_8/my-lab8/Cookie-stand1/images/woodbackground.jpg);
   width: 100%;
@@ -42,6 +43,12 @@ h1 {
   font-size: 7vw;
   font-family: 'Indie Flower','Inconsolata', monospace
 }
+.est {
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
 .fish {
   width: 35%;
   margin-left: 32%;
