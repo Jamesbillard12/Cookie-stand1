@@ -46,11 +46,11 @@ function cookieShop(name, min, max, avg) {
 
     for (var i = 0; i < this.cookiesPurchasedArray.length; i++) {
       var td = document.createElement('td');
-      td.appendChild(document.createTextNode(this.cookiesPurchasedArray[i] + ' cookies'));
+      td.appendChild(document.createTextNode(this.cookiesPurchasedArray[i]));
       tr.appendChild(td);
     }
     var td2 = document.createElement('td');
-    td2.appendChild(document.createTextNode(this.total + ' cookies'));
+    td2.appendChild(document.createTextNode(this.total));
     tr.appendChild(td2);
   };
   this.alternate = function(id){
@@ -126,7 +126,7 @@ var getTotals = function(){
   // Add ID to the totals row for later access (and styling)
   totalsTR.id = 'totalsTR';
 
-  storeTable.appendChild(totalsTR);
+  totalTable.appendChild(totalsTR);
   var totalByTimeOfDayDescTD = document.createElement('td');
   totalByTimeOfDayDescTD.textContent = 'Totals'
   totalsTR.appendChild(totalByTimeOfDayDescTD);
