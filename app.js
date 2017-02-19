@@ -1,5 +1,5 @@
 headerArr = ['Store Name:','10:00am:', '11:00am:', '12:00am:', '1:00pm:', '2:00pm:', '3:00pm:', '4:00pm:', '5:00pm', 'Total:'];
-
+//as the name says this renders my table header...
 function renderTableheader() {
   var header = document.getElementById('storeTable');
   for (var i = 0; i < headerArr.length; i++){
@@ -21,11 +21,11 @@ function cookieShop(name, min, max, avg) {
   this.total = 0;
   this.cookiesPurchasedArray = [];
   listOfShops.push(this);
-
+//rand customer generator
   this.randCustPerHour = function(){
     return Math.random() * (this.max - this.min + 1) + this.min;
   };
-
+//generates cookies and pushes to cookiesPurchasedArray
   this.cookiesPurchased = function() {
     for (var i = 1; i < headerArr.length - 1; i++) {
       var rand = Math.round(this.avg * this.randCustPerHour());
@@ -34,7 +34,7 @@ function cookieShop(name, min, max, avg) {
     };
   };
 
-
+//this renders the cookie table
   this.renderCookiesPerHour = function() {
     this.cookiesPurchased();
     var table = document.getElementById('storeTable');
@@ -53,6 +53,7 @@ function cookieShop(name, min, max, avg) {
     td2.appendChild(document.createTextNode(this.total));
     tr.appendChild(td2);
   };
+  //alternates row colors
   this.alternate = function(id){
     if(document.getElementsByTagName){
       var table = document.getElementById('storeTable');
@@ -68,7 +69,7 @@ function cookieShop(name, min, max, avg) {
   }
 
 }
-
+//created function so i can create more stores
 function handleFormSubmit(event) {
   event.preventDefault();
   console.log(event);
@@ -98,7 +99,7 @@ function handleFormSubmit(event) {
 
 
 form.addEventListener('submit', handleFormSubmit);
-
+//where methods and functions are called
 
 var pikePlace = new cookieShop('Pike-Place ', 17, 88, 5.2);
 pikePlace.renderCookiesPerHour();
