@@ -1,6 +1,6 @@
-/** {
-border-style: dashed;
-}*/
+* {
+  border-style: dashed;
+}
 html, body {
   height: 100%;
 }
@@ -290,4 +290,36 @@ p {
 .familycaption{
   margin-left: 27%;
   font-size: 1vw;
+}
+
+.buystuff{
+  display: inline-flex;
+  margin-top: 6%;
+  margin-left: 7%;
+}
+
+.item1{
+  float: left;
+  width: 55%;
+}
+
+.sticker{
+  width: 84%;
+}
+
+.button1{
+  margin-left: 31%;
+}
+
+.item2{
+  float: left;
+  width: 55%;
+}
+
+.shirt{
+  width:74%;
+}
+
+.button2{
+  margin-left: 27%;
 }
