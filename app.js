@@ -28,7 +28,7 @@ function cookieShop(name, min, max, avg) {
 
   this.cookiesPurchased = function() {
     for (var i = 1; i < headerArr.length - 1; i++) {
-      var rand = this.avg * this.randCustPerHour();
+      var rand = Math.round(this.avg * this.randCustPerHour());
       this.cookiesPurchasedArray.push(rand);
       this.total += rand;
     };
@@ -46,11 +46,11 @@ function cookieShop(name, min, max, avg) {
 
     for (var i = 0; i < this.cookiesPurchasedArray.length; i++) {
       var td = document.createElement('td');
-      td.appendChild(document.createTextNode(Math.round(this.cookiesPurchasedArray[i]) + ' cookies'));
+      td.appendChild(document.createTextNode(this.cookiesPurchasedArray[i] + ' cookies'));
       tr.appendChild(td);
     }
     var td2 = document.createElement('td');
-    td2.appendChild(document.createTextNode(Math.round(this.total) + ' cookies'));
+    td2.appendChild(document.createTextNode(this.total + ' cookies'));
     tr.appendChild(td2);
   };
   this.alternate = function(id){
@@ -137,7 +137,7 @@ var getTotals = function(){
     for (j = 0; j < listOfShops.length; j++) {
       totalByTimeOfDay += listOfShops[j].cookiesPurchasedArray[i-1]
     }
-    totalByTimeOfDayTD.textContent = Math.round(totalByTimeOfDay);
+    totalByTimeOfDayTD.textContent = totalByTimeOfDay;
     totalsTR.appendChild(totalByTimeOfDayTD);
   }
 
@@ -148,7 +148,7 @@ var getTotals = function(){
       grandTotal += listOfShops[i].total;
     }
 
-    grandTotalTD.textContent = Math.round(grandTotal);
+    grandTotalTD.textContent = grandTotal;
     totalsTR.appendChild(grandTotalTD);
 }
 getTotals();
