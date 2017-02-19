@@ -1,4 +1,6 @@
-
+/** {
+border-style: dashed;
+}*/
 html, body {
   height: 100%;
 }
@@ -31,9 +33,6 @@ body {
   font-family: 'Lobster', cursive;
 }
 
-
-
-
 .img {
   background-image: url(/Users/jamesrbillard/programs/code_fellows/code_201/lab_8/my-lab8/Cookie-stand1/images/woodbackground.jpg);
   width: 100%;
@@ -62,6 +61,35 @@ h1 {
   width: 35%;
   margin-left: 32%;
   margin-bottom: 15px;
+}
+.storeNav{
+  margin-left: 15%;
+  border-style: solid;
+  border-width: thin;
+  background-color: rgba(42, 44, 44, 0.5);
+  width: 70.6%;
+  height: 38px;
+}
+
+.groupnav{
+  margin-top: 12px;
+  margin-left: 2px;
+}
+.nav {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: -3px;
+  margin-left: -3px;
+  background-color: rgba(42, 44, 44, 0.5);
+}
+
+.nav:hover{
+  text-decoration: underline;
 }
 
 .wrapper {
@@ -245,4 +273,9 @@ p {
 
 #totalsTR {
   background-color: rgba(255, 0, 0, 0.3);
+}
+
+.family{
+  width: 67%;
+  margin-left: 18%;
 }
