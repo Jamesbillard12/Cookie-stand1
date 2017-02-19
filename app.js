@@ -11,6 +11,8 @@ function renderTableheader() {
 }
 renderTableheader();
 
+listOfShops= [];
+
 function cookieShop(name, min, max, avg) {
   this.name = name;
   this.min = min;
@@ -18,6 +20,7 @@ function cookieShop(name, min, max, avg) {
   this.avg = avg;
   this.total = 0;
   this.cookiesPurchasedArray = [];
+  listOfShops.push(this);
 
   this.randCustPerHour = function(){
     return Math.random() * (this.max - this.min + 1) + this.min;
@@ -25,7 +28,7 @@ function cookieShop(name, min, max, avg) {
 
   this.cookiesPurchased = function() {
     for (var i = 1; i < headerArr.length - 1; i++) {
-      var rand = this.avg * this.randCustPerHour();
+      var rand = Math.round(this.avg * this.randCustPerHour());
       this.cookiesPurchasedArray.push(rand);
       this.total += rand;
     };
@@ -43,11 +46,11 @@ function cookieShop(name, min, max, avg) {
 
     for (var i = 0; i < this.cookiesPurchasedArray.length; i++) {
       var td = document.createElement('td');
-      td.appendChild(document.createTextNode(Math.floor(this.cookiesPurchasedArray[i]) + ' cookies'));
+      td.appendChild(document.createTextNode(this.cookiesPurchasedArray[i] + ' cookies'));
       tr.appendChild(td);
     }
     var td2 = document.createElement('td');
-    td2.appendChild(document.createTextNode(Math.floor(this.total) + ' cookies'));
+    td2.appendChild(document.createTextNode(this.total + ' cookies'));
     tr.appendChild(td2);
   };
   this.alternate = function(id){
@@ -83,6 +86,12 @@ function handleFormSubmit(event) {
   event.target.min.value = null;
   event.target.max.value = null;
   event.target.avg.value = null;
+
+  // Access totals row, delete it, and recreate it by calling getTotals function again.
+  var totalsTR = document.getElementById('totalsTR');
+  totalsTR.remove(1);
+  getTotals();
+
 }
 
 
@@ -110,3 +119,36 @@ bellevueSquare.alternate();
 var alki = new cookieShop('Alki ', 3, 24, 2.6);
 alki.renderCookiesPerHour();
 alki.alternate();
+
+var getTotals = function(){
+
+  var totalsTR = document.createElement('tr')
+  // Add ID to the totals row for later access (and styling)
+  totalsTR.id = 'totalsTR';
+
+  storeTable.appendChild(totalsTR);
+  var totalByTimeOfDayDescTD = document.createElement('td');
+  totalByTimeOfDayDescTD.textContent = 'Totals'
+  totalsTR.appendChild(totalByTimeOfDayDescTD);
+
+  for (i = 1; i < (headerArr.length - 1); i++) {
+    var totalByTimeOfDayTD = document.createElement('td');
+    var totalByTimeOfDay = 0;
+    for (j = 0; j < listOfShops.length; j++) {
+      totalByTimeOfDay += listOfShops[j].cookiesPurchasedArray[i-1]
+    }
+    totalByTimeOfDayTD.textContent = totalByTimeOfDay;
+    totalsTR.appendChild(totalByTimeOfDayTD);
+  }
+
+    var grandTotalTD = document.createElement('td');
+
+    var grandTotal = 0;
+    for (i = 0; i < listOfShops.length; i++) {
+      grandTotal += listOfShops[i].total;
+    }
+
+    grandTotalTD.textContent = grandTotal;
+    totalsTR.appendChild(grandTotalTD);
+}
+getTotals();
