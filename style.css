@@ -273,9 +273,21 @@ p {
 
 #totalsTR {
   background-color: rgba(255, 0, 0, 0.3);
+  height: 20%;
+  padding: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 1vw;
+  width: 100px;
 }
 
 .family{
   width: 67%;
+  margin-top: 5%;
   margin-left: 18%;
+}
+
+.familycaption{
+  margin-left: 27%;
+  font-size: 1vw;
 }
