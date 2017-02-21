@@ -23,11 +23,11 @@ function cookieShop(name, min, max, avg) {
   this.cookiesPurchasedArray = [];
   listOfShops.push(this);
 //rand customer generator
-  this.randCustPerHour = function(){
+  cookieShop.prototype.randCustPerHour = function(){
     return Math.random() * (this.max - this.min + 1) + this.min;
   };
 //generates cookies and pushes to cookiesPurchasedArray
-  this.cookiesPurchased = function() {
+  cookieShop.prototype.cookiesPurchased = function() {
     for (var i = 1; i < headerArr.length - 1; i++) {
       var rand = Math.round(this.avg * this.randCustPerHour());
       this.cookiesPurchasedArray.push(rand);
@@ -36,7 +36,7 @@ function cookieShop(name, min, max, avg) {
   };
 
 //this renders the cookie table
-  this.renderCookiesPerHour = function() {
+  cookieShop.prototype.renderCookiesPerHour = function() {
     this.cookiesPurchased();
     var table = document.getElementById('storeTable');
     var tr = document.createElement('tr');
@@ -55,7 +55,7 @@ function cookieShop(name, min, max, avg) {
     tr.appendChild(td2);
   };
   //alternates row colors
-  this.alternate = function(id){
+  cookieShop.prototype.alternate = function(id){
     if(document.getElementsByTagName){
       var table = document.getElementById('storeTable');
       var rows = table.getElementsByTagName('tr');
