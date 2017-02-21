@@ -1,3 +1,4 @@
+'use strict';
 headerArr = ['Store Name:','10:00am:', '11:00am:', '12:00am:', '1:00pm:', '2:00pm:', '3:00pm:', '4:00pm:', '5:00pm', 'Total:'];
 //as the name says this renders my table header...
 function renderTableheader() {
