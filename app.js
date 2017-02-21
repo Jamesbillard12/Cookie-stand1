@@ -1,7 +1,7 @@
 'use strict';
 var headerArr = ['Store Name:','10:00am:', '11:00am:', '12:00am:', '1:00pm:', '2:00pm:', '3:00pm:', '4:00pm:', '5:00pm', 'Total:'];
 //as the name says this renders my table header...
-function renderTableheader() {
+function renderTableHeader() {
   var header = document.getElementById('storeTable');
   for (var i = 0; i < headerArr.length; i++){
     var newTh = document.createElement('th');
@@ -10,7 +10,7 @@ function renderTableheader() {
     header.appendChild(newTh);
   };
 }
-renderTableheader();
+renderTableHeader();
 
 var listOfShops= [];
 
