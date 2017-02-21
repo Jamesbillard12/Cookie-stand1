@@ -1,5 +1,5 @@
 'use strict';
-headerArr = ['Store Name:','10:00am:', '11:00am:', '12:00am:', '1:00pm:', '2:00pm:', '3:00pm:', '4:00pm:', '5:00pm', 'Total:'];
+var headerArr = ['Store Name:','10:00am:', '11:00am:', '12:00am:', '1:00pm:', '2:00pm:', '3:00pm:', '4:00pm:', '5:00pm', 'Total:'];
 //as the name says this renders my table header...
 function renderTableheader() {
   var header = document.getElementById('storeTable');
@@ -12,7 +12,7 @@ function renderTableheader() {
 }
 renderTableheader();
 
-listOfShops= [];
+var listOfShops= [];
 
 function cookieShop(name, min, max, avg) {
   this.name = name;
@@ -59,7 +59,7 @@ function cookieShop(name, min, max, avg) {
     if(document.getElementsByTagName){
       var table = document.getElementById('storeTable');
       var rows = table.getElementsByTagName('tr');
-      for(i = 0; i < rows.length; i++){
+      for(var i = 0; i < rows.length; i++){
         if(i % 2 === 0){
           rows[i].className = 'even';
         }else{
@@ -133,10 +133,10 @@ var getTotals = function(){
   totalByTimeOfDayDescTD.textContent = 'Totals'
   totalsTR.appendChild(totalByTimeOfDayDescTD);
 
-  for (i = 1; i < (headerArr.length - 1); i++) {
+  for (var i = 1; i < (headerArr.length - 1); i++) {
     var totalByTimeOfDayTD = document.createElement('td');
     var totalByTimeOfDay = 0;
-    for (j = 0; j < listOfShops.length; j++) {
+    for (var j = 0; j < listOfShops.length; j++) {
       totalByTimeOfDay += listOfShops[j].cookiesPurchasedArray[i-1]
     }
     totalByTimeOfDayTD.textContent = totalByTimeOfDay;
