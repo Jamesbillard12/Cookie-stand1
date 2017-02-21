@@ -76,9 +76,9 @@ function handleFormSubmit(event) {
   console.log(event);
 
   var name = event.target.name.value;
-  var min = parseFloat(event.target.min.value);
-  var max = parseFloat(event.target.max.value);
-  var avg = parseFloat(event.target.avg.value);
+  var min = parseInt(event.target.min.value);
+  var max = parseInt(event.target.max.value);
+  var avg = parseInt(event.target.avg.value);
 
   var newCookieShop = new cookieShop(name, min, max, avg);
   newCookieShop.renderCookiesPerHour();
