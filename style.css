@@ -273,6 +273,7 @@ p {
 
 #totalsTR {
   background-color: rgba(255, 0, 0, 0.3);
+  color: white;
   height: 20%;
   padding: 10px;
   padding-left: 0px;
